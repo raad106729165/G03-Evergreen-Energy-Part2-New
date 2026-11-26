@@ -23,15 +23,21 @@ $footer_contacts = [
     ['Phone',   'tel:+61390000000',                   '+61 3 9000 0000'],
 ];
 
-$page_files    = array_keys($footer_pages);
-$link_urls     = array_keys($footer_links);
-$rows          = max(count($footer_pages), count($footer_links), count($footer_contacts));
+$page_files = array_keys($footer_pages);
+$link_urls  = array_keys($footer_links);
+$rows       = max(count($footer_pages), count($footer_links), count($footer_contacts));
 ?>
-    <footer>
-        <!-- PASTE THE START OF YOUR FOOTER HERE:
-             the wrapper <div> and the footer-left section that come
-             before <div class="footer-right"> in your original HTML -->
+    <!-- ===== Shared footer (designed by Marwah and edited by Rayahen Raad) ===== -->
+    <footer id="site-footer">
+        <div class="footer-container">
+            <!-- Left: logo, motto and copyright -->
+            <div class="footer-left">
+                <img src="images/evergreen-footer.png" alt="Evergreen Energy logo" class="footer-logo">
+                <p class="footer-motto">Sustainable energy for a greener future.</p>
+                <p class="footer-copy">&copy; <?php echo date("Y"); ?> Evergreen Energy | Group G03, COS10026 Web Technology Project</p>
+            </div>
 
+            <!-- Right: page links, quick links and contact details -->
             <div class="footer-right">
                 <table class="footer-table">
                     <tr>
@@ -50,3 +56,5 @@ $rows          = max(count($footer_pages), count($footer_links), count($footer_c
             </div>
         </div>
     </footer>
+</body>
+</html>
